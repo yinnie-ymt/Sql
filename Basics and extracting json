@@ -1,7 +1,8 @@
 ---Top Buyers by nationality
 
 select
-count(*) as "Quantity", --- astrik sign (*) refers to every value
+count(*) as "Quantity", 
+--- astrik sign (*) refers to every value
 customer_info ->'address' ->> 'country' as "Country"
 
 ---extracting json data and therefore the last item needs to use two '>>'
